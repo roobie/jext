@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "tape spec/**/*.js | faucet",
+    "pregendoc": "rm -rf doc && mkdir doc",
+    "gendoc": "jsdox --output doc modules",
     "assemble:debug": "uglifyjs modules/* --screw-ie8 -b -e -o out/jext.debug.js",
     "assemble:min": "uglifyjs modules/* --screw-ie8 -m -c -e -o out/jext.min.js --source-map out/jext.min.js.map --source-map-root ./ --source-map-include-sources",
     "preassemble": "rm -rf out && mkdir out",
     "assemble": "npm run assemble:debug && npm run assemble:min",
-    "precommit": "npm run test && npm run assemble"
+    "precommit": "npm run test && npm run assemble && npm run gendoc"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "faucet": "0.0.1",
     "husky": "^0.11.7",
+    "jsdox": "^0.4.10",
     "tape": "^4.6.0",
     "uglify-js": "^2.7.3"
   }

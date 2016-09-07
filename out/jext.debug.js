@@ -11,6 +11,11 @@
             }
         }
     });
+    Object.defineProperties(Date.prototype, {
+        frob: {
+            value: function thingFrob() {}
+        }
+    });
     Object.defineProperties(Function.prototype, {
         tap: {
             value: function Function_tap(fn) {
@@ -20,6 +25,18 @@
                     return self(data);
                 };
             }
+        }
+    });
+    Object.defineProperties(Number.prototype, {
+        money: {
+            value: function Number_money() {
+                return parseFloat(this.toFixed(2));
+            }
+        }
+    });
+    Object.defineProperties(Object.prototype, {
+        frob: {
+            value: function thingFrob() {}
         }
     });
     Object.defineProperties(String.prototype, {
