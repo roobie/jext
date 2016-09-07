@@ -2,7 +2,7 @@
 
 const test = require('tape')
 
-require('../out/jext.debug.js')
+require('../modules/promise.js')
 
 test('tap', t => {
   t.plan(1)

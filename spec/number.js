@@ -2,9 +2,9 @@
 
 const test = require('tape')
 
-require('../out/jext.debug.js')
+require('../modules/number.js')
 
-test('tap', t => {
+test('toMoney', t => {
   t.plan(1)
 
   const n = Math.PI
