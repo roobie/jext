@@ -27,7 +27,7 @@ test('isEmpty', t => {
 test('skip/take', t => {
   t.plan(8)
 
-  const src = [1, 2, 3, 4, 5];
+  const src = [1, 2, 3, 4, 5]
 
   t.deepEquals(src.skip(1), [2, 3, 4, 5])
   t.deepEquals(src.skip(2), [3, 4, 5])
@@ -39,4 +39,12 @@ test('skip/take', t => {
 
   t.deepEquals(src.skip(1).take(2), [2, 3])
   t.deepEquals(src.skip(4).take(2), [5])
+})
+
+test('isHomogenous', t => {
+  t.plan(3)
+
+  t.ok(![1, ''].isHomogenous())
+  t.ok([1, 2].isHomogenous())
+  t.ok([void 0, void 0].isHomogenous())
 })

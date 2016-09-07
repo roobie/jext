@@ -2,7 +2,7 @@
   "name": "jext",
   "version": "1.0.0",
   "description": "Usable extensions to native prototypes in JavaScript using `Object.defineProperties`",
-  "main": "out/jext.debug.js",
+  "main": "index.js",
   "scripts": {
     "test": "tape spec/**/*.js | faucet",
     "pregendoc": "rm -rf doc && mkdir doc",
