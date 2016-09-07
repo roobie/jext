@@ -38,7 +38,7 @@ Object.defineProperties(String.prototype, {
    */
   words: {
     value: function String_words() {
-      return this.split(' ');
+      return this.trim().split(' ');
     }
   }
 });

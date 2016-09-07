@@ -23,12 +23,35 @@ Object.defineProperties(Function.prototype, {
    */
   tap: {
     value: function Function_tap(fn) {
-      var self = this;
-
+      const self = this;
       return function (data) {
         fn(data);
         return self(data);
       };
+    }
+  },
+
+  not: {
+    value: function Function_not() {
+      return function (arg) {
+        return !this(arg);
+      };
+    }
+  },
+
+  memoize: {
+    value: function Function_memoize() {
+      const self = this;
+      const cache = {};
+      self.cache = cache;
+
+      return function (arg) {
+        if (!(arg in cache)) {
+          cache[arg] = self(arg);
+        }
+
+        return cache[arg];
+      }
     }
   }
 });
