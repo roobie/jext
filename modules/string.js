@@ -1,16 +1,20 @@
+/**
+ * @namespace String
+ */
 Object.defineProperties(String.prototype, {
   /**
    * @method String.prototype.contains
    *
-   * checks whether the `substring` is a part of `this`
+   * @desc
+   * Checks whether the supplied substring is a part of this.
    *
    * @param {string} substring - the substring to check for.
    *
    * @returns {boolean}
-   * `true` if substring is a part of `this` string,
-   * otherwise `false`.
+   * true if substring is a part of this string,
+   * otherwise false.
    *
-   * @example:
+   * @example
    * 'foo'.contains('f') // -> true
    * 'foo'.contains('Q') // -> false
    */
@@ -23,12 +27,13 @@ Object.defineProperties(String.prototype, {
   /**
    * @method String.prototype.words
    *
+   * @desc
    * splits a string of text into words.
    *
-   * @returns {array<string>}
+   * @returns {string[]}
    * An array containing the words.
    *
-   * @example:
+   * @example
    * 'This is a senctence'.words() // ['This', 'is', 'a', 'sentence.']
    */
   words: {
