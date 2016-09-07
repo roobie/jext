@@ -1,12 +1,12 @@
 Object.defineProperties(String.prototype, {
     contains: {
-        value: function stringContains(substring) {
+        value: function String_contains(substring) {
             return !!(~this.indexOf(substring));
         }
     },
 
     words: {
-        value: function stringWords() {
+        value: function String_words() {
             return this.split(' ');
         }
     }

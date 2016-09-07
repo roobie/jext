@@ -9,7 +9,7 @@
     "assemble:min": "uglifyjs modules/* --screw-ie8 -m -c -e -o out/jext.min.js --source-map out/jext.min.js.map --source-map-root ./ --source-map-include-sources",
     "preassemble": "rm -rf out && mkdir out",
     "assemble": "npm run assemble:debug && npm run assemble:min",
-    "precommit": "npm run assemble"
+    "precommit": "npm run test && npm run assemble"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,7 @@ Object.defineProperties(Function.prototype, {
            var handle = (data) => data.id;
            getPromise().then(handle.tap(val => window.val = val))
          */
-        value: function functionTap(fn) {
+        value: function Function_tap(fn) {
             var self = this;
 
             return function (data) {
