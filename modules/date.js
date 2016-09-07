@@ -1,4 +1,4 @@
-defProps(Date[__proto], {
+Object.defineProperties(Date.prototype, {
   frob: {
     value: function thingFrob() {
     }

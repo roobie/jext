@@ -1,7 +1,7 @@
 /**
  * @namespace Function
  */
-defProps(Function[__proto], {
+Object.defineProperties(Function.prototype, {
   /**
    * @method Function.prototype.tap
    *
