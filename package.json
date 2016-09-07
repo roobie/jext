@@ -4,6 +4,7 @@
   "description": "Usable extensions to native prototypes in JavaScript using `Object.defineProperties`",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm run assemble",
     "test": "tape spec/**/*.js | faucet",
     "pregendoc": "rm -rf doc && mkdir doc",
     "gendoc": "jsdoc modules/*.js -d doc -R README.md",
@@ -11,7 +12,7 @@
     "assemble:min": "uglifyjs modules/* --screw-ie8 -m -c -e -o out/jext.min.js --source-map out/jext.min.js.map --source-map-root ./ --source-map-include-sources",
     "preassemble": "rm -rf out && mkdir out",
     "assemble": "npm run assemble:debug && npm run assemble:min",
-    "precommit": "npm run test && npm run assemble"
+    "precommit": "npm run test"
   },
   "repository": {
     "type": "git",

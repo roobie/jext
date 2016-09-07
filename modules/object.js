@@ -1,4 +1,4 @@
-Object.defineProperties(Object.prototype, {
+defProps(Object[__proto], {
   frob: {
     value: function thingFrob() {
     }

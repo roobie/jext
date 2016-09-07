@@ -1,7 +1,7 @@
 /**
  * @namespace Number
  */
-Object.defineProperties(Number.prototype, {
+defProps(Number[__proto], {
   /**
    * @method Number.prototype.toMoney
    *

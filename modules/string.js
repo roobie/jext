@@ -1,7 +1,7 @@
 /**
  * @namespace String
  */
-Object.defineProperties(String.prototype, {
+defProps(String[__proto], {
   /**
    * @method String.prototype.contains
    *

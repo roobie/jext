@@ -1,4 +1,4 @@
-Object.defineProperties(Array.prototype, {
+defProps(Array[__proto], {
   first: {
     value: function Array_first() {
       return this[0];

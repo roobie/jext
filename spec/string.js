@@ -2,8 +2,7 @@
 
 const test = require('tape')
 
-require('../modules/array.js')
-require('../modules/string.js')
+require('../out/jext.debug.js')
 
 test('contains', t => {
   t.plan(4)

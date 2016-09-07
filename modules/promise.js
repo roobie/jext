@@ -1,7 +1,7 @@
 /**
  * @namespace Promise
  */
-Object.defineProperties(Promise.prototype, {
+defProps(Promise[__proto], {
   /**
    * @method Promise.prototype.tap
    */

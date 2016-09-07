@@ -1,5 +1,8 @@
 (function() {
-    Object.defineProperties(Array.prototype, {
+    "use strict";
+    const defProps = Object.defineProperties;
+    const __proto = "prototype";
+    defProps(Array[__proto], {
         first: {
             value: function Array_first() {
                 return this[0];
@@ -11,12 +14,12 @@
             }
         }
     });
-    Object.defineProperties(Date.prototype, {
+    defProps(Date[__proto], {
         frob: {
             value: function thingFrob() {}
         }
     });
-    Object.defineProperties(Function.prototype, {
+    defProps(Function[__proto], {
         tap: {
             value: function Function_tap(fn) {
                 const self = this;
@@ -47,19 +50,19 @@
             }
         }
     });
-    Object.defineProperties(Number.prototype, {
+    defProps(Number[__proto], {
         toMoney: {
             value: function Number_toMoney() {
                 return parseFloat(this.toFixed(2));
             }
         }
     });
-    Object.defineProperties(Object.prototype, {
+    defProps(Object[__proto], {
         frob: {
             value: function thingFrob() {}
         }
     });
-    Object.defineProperties(Promise.prototype, {
+    defProps(Promise[__proto], {
         tap: {
             value: function Promise_tap(fn) {
                 return this.then(function(value) {
@@ -69,7 +72,7 @@
             }
         }
     });
-    Object.defineProperties(String.prototype, {
+    defProps(String[__proto], {
         contains: {
             value: function String_contains(substring) {
                 return !!~this.indexOf(substring);
